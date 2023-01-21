@@ -3,10 +3,6 @@ python:
   - "3.5"
   - "3.6"
   - "3.10.2"
-virtualenv:
-  system_site_packages: true
-before_install:
-  - python -m pip install --upgrade pip
 install:
   - pip install -r requirements.txt
 before_script:
