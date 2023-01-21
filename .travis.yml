@@ -1,0 +1,11 @@
+language: python
+python:
+  - "3.10.2"
+install:
+  - pip install -r requirements.txt
+before_script:
+  - python manage.py migrate
+script:
+  - flake8 .
+
+
