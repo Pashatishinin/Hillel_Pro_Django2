@@ -3,11 +3,12 @@ python:
   - "3.10.2"
 virtualenv:
   system_site_packages: true
+before_install:
+  - choco install python --version 3.10.2
+  - python -m pip install --upgrade pip
 install:
   - pip install -r requirements.txt
 before_script:
-  - choco install python --version 3.10.2
-  - python -m pip install --upgrade pip
   - python manage.py migrate
 script:
   - flake8 .
