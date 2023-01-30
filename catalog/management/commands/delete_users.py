@@ -9,10 +9,8 @@ class Command(BaseCommand):
         parser.add_argument('users', nargs='*', type=int)
 
     def handle(self, *args, **options):
-
-        for i in options["users"]:
-            b = User.objects.get(pk=int(i))
-            User.objects.filter(username=b).delete()
+        d = User.objects.filter(id__in=options["users"])
+        d.delete()
 
 
 
