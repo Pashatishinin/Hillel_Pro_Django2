@@ -14,7 +14,3 @@ class Command(BaseCommand):
             self.stdout.write(self.style.SUCCESS("Cant delete, cause superuser in this list"))
         else:
             d.delete()
-
-
-
-
