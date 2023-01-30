@@ -8,10 +8,14 @@ class Command(BaseCommand):
         parser.add_argument('users', type=int, choices=range(1, 11))
 
     def handle(self, *args, **options):
+        User.objects.bulk_create([User(username=Faker().email().split('@')[0],
+                                       email=Faker().email(),
+                                       password=Faker().password()) for _ in range(options["users"])])
 
-        for i in range(1, options["users"]+1):
-            p = User.objects.create(username=Faker().name(), email=Faker().email(), password=Faker().password())
-            p.save()
+
+
+
+
 
 
 
