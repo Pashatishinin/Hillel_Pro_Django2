@@ -6,7 +6,7 @@ class Command(BaseCommand):
     help = 'Closes the specified poll for voting'
 
     def add_arguments(self, parser):
-        parser.add_argument('users', nargs='*', type=int, choices=range(1, 11))
+        parser.add_argument('users', nargs='*', type=int)
 
     def handle(self, *args, **options):
 
