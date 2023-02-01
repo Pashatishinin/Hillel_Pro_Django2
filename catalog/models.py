@@ -1,8 +1,37 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
 
+class City(models.Model):
+    name = models.CharField("name", max_length=200)
+
+    def __str__(self):
+        return self.name
+
+
+class Product(models.Model):
+    name = models.CharField("name", max_length=50)
+
+    def __str__(self):
+        """String for representing the Model object (in Admin site etc.)"""
+        return self.name
+
+
+class Client(models.Model):
+    name = models.CharField("name", max_length=30)
+    city = models.ForeignKey(City, on_delete=models.CASCADE)
+    product = models.ManyToManyField(Product, verbose_name="genre")
+
+    def __str__(self):
+        return self.name
+
+
+class Supplier(models.Model):
+    name = models.CharField("name", max_length=30)
+    city = models.OneToOneField(City, on_delete=models.CASCADE, primary_key=True)
+
+    def __str__(self):
+        return self.name
 
 
 
