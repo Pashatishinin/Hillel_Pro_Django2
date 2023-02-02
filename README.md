@@ -1,26 +1,8 @@
-Инициализоровать новый django проект с последней версией django:
+![Graphviz](https://github.com/Pashatishinin/Hillel_Pro_Django2/blob/main/my_project_sans_foo_bar.png)
 
-зайти в папку репозитория
+![1](https://github.com/Pashatishinin/Hillel_Pro_Django2/blob/HW_9/1.jpg)
 
-django-admin startproject <project_name> .
-(точка в конце - путь куда положить файлы проекта, в данном случае - текущая папка)
+![2](https://github.com/Pashatishinin/Hillel_Pro_Django2/blob/HW_9/2.jpg)
 
-
-
-В .gitignore не забыть добавить (удостовериться в наличии) файл базы данных, папку виртульаного окружения (если она в папке проекта) и папку настроект среды разработки
-
-
-
-Создать requirements.txt (или Pipfile + Pipfile.lock в зависимости от используемого)
-
-
-
-Создать django приложение catalog (python manage.py startapp <app_name>) и добавить его в INSTALLED_APPS
-
-
-
-Убедиться что SECRET_KEY будет взят из переменных окружения и НЕ будет храниться в репозитории (os.environ.get("SECRET_KEY", "<def value>"))
-
-
-
-README.md - описать проект
+![3](https://github.com/Pashatishinin/Hillel_Pro_Django2/blob/HW_9/3.jpg)
+  
