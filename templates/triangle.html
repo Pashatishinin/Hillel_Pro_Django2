@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TRIANGLE</title>
+</head>
+<body>
+    <form action="/triangle/" method="GET">
+        <h2>Let's calculate the hypotenuse</h2>
+        {% csrf_token %}
+        <label>First cathetus</label><br>
+        {{ form.cathetus1 }}<br>
+        <label>Second cathetus</label><br>
+        {{ form.cathetus2 }}<br>
+        <input type="submit" value="calculate the hypotenuse"><br>
+        {% if summary %}
+            <p>Hypotenuse is {{ summary }}</p>
+        {% endif %}
+    </form>
+</body>
+</html>
