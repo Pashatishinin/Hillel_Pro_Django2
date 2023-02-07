@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final_Page</title>
+</head>
+<body>
+    {% if first_name %}
+            <p>user {{ first_name }} is updated</p>
+    {% endif %}
+    <p><a href="{% url "create_person" %}">Create new person</a></p>
+
+</body>
+</html>

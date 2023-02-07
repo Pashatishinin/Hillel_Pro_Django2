@@ -43,7 +43,10 @@ INSTALLED_APPS = [
 
     'django_extensions',
 
+    'triangle',
+
     'catalog'
+
 ]
 
 MIDDLEWARE = [
