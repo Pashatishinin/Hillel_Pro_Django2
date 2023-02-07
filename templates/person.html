@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CREATE PERSON</title>
+</head>
+<body>
+    <form action="{% url "create_person" %}" method="POST">
+        <h2>Person</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="create new person"><br>
+        {% if first_name %}
+            <p>user {{ first_name }} is created</p>
+        {% endif %}
+    </form>
+</body>
+</html>

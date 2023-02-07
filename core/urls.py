@@ -16,10 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from triangle.views import hipo
+from triangle.views import hipo, create_person, update_person
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path("triangle/", hipo, name='triangle'),
+
+    path("person/", create_person, name='create_person'),
+
+    path('person/<int:pk>', update_person, name="update_person")
+
 ]
